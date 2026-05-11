@@ -23,18 +23,12 @@ struct MenuPrincipal: View {
                     }
                 }
 
-                Section("TECSUP / aplicaciones") {
+                Section("Tarea") {
                     NavigationLink("Notas de teoría (4 notas + laboratorio)") {
                         NotasTeoriaView()
                     }
                     NavigationLink("Cálculo CTS") {
                         CalculoCTSView()
-                    }
-                    NavigationLink("Pago de instructores") {
-                        PagoInstructorView()
-                    }
-                    NavigationLink("Trabajo grupal — CxC y CxP") {
-                        ContabilidadTrabajoGrupalView()
                     }
                 }
             }

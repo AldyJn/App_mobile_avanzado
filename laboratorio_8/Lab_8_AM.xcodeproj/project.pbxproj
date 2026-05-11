@@ -14,8 +14,6 @@
 		A20000000000000000000005 /* Ventana03.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000005 /* Ventana03.swift */; };
 		A20000000000000000000006 /* NotasTeoriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000006 /* NotasTeoriaView.swift */; };
 		A20000000000000000000007 /* CalculoCTSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000007 /* CalculoCTSView.swift */; };
-		A20000000000000000000008 /* PagoInstructorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000008 /* PagoInstructorView.swift */; };
-		A20000000000000000000009 /* ContabilidadTrabajoGrupalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000009 /* ContabilidadTrabajoGrupalView.swift */; };
 		A2000000000000000000000A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000000A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +25,6 @@
 		A10000000000000000000005 /* Ventana03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventana03.swift; sourceTree = "<group>"; };
 		A10000000000000000000006 /* NotasTeoriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotasTeoriaView.swift; sourceTree = "<group>"; };
 		A10000000000000000000007 /* CalculoCTSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoCTSView.swift; sourceTree = "<group>"; };
-		A10000000000000000000008 /* PagoInstructorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoInstructorView.swift; sourceTree = "<group>"; };
-		A10000000000000000000009 /* ContabilidadTrabajoGrupalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContabilidadTrabajoGrupalView.swift; sourceTree = "<group>"; };
 		A1000000000000000000000A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A100000000000000000000FF /* Lab_8_AM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab_8_AM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,8 +58,6 @@
 				A10000000000000000000005 /* Ventana03.swift */,
 				A10000000000000000000006 /* NotasTeoriaView.swift */,
 				A10000000000000000000007 /* CalculoCTSView.swift */,
-				A10000000000000000000008 /* PagoInstructorView.swift */,
-				A10000000000000000000009 /* ContabilidadTrabajoGrupalView.swift */,
 				A1000000000000000000000A /* Assets.xcassets */,
 			);
 			path = Lab_8_AM;
@@ -117,6 +111,7 @@
 			developmentRegion = es;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				es,
 				en,
 				Base,
 			);
@@ -153,8 +148,6 @@
 				A20000000000000000000005 /* Ventana03.swift in Sources */,
 				A20000000000000000000006 /* NotasTeoriaView.swift in Sources */,
 				A20000000000000000000007 /* CalculoCTSView.swift in Sources */,
-				A20000000000000000000008 /* PagoInstructorView.swift in Sources */,
-				A20000000000000000000009 /* ContabilidadTrabajoGrupalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +282,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Lab_8_AM";
+				INFOPLIST_KEY_CFBundleDisplayName = Lab_8_AM;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,7 +310,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Lab_8_AM";
+				INFOPLIST_KEY_CFBundleDisplayName = Lab_8_AM;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -361,4 +354,3 @@
 	};
 	rootObject = A50000000000000000000002 /* Project object */;
 }
-

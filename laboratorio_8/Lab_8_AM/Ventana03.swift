@@ -54,7 +54,7 @@ struct Ventana03: View {
                         .padding(.horizontal)
                 }
 
-                Text("Desa. Por Juan Leon Suiyon - 2024")
+                Text("Desa. Por mi")
 
                 // Mostrar el resultado
                 if let peso = pesoIdeal {
