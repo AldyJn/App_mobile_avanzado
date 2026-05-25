@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-inicio">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Inicio-->
+        <scene sceneID="inicio-scene">
+            <objects>
+                <navigationController storyboardIdentifier="nav-inicio" id="nav-inicio" automaticallyAdjustsScrollViewInsets="NO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar-inicio"/>
+                    <connections>
+                        <segue destination="inicio-vc" kind="relationship" relationship="rootViewController" id="root-inicio"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inicio-nav-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-900" y="4"/>
+        </scene>
+        <scene sceneID="inicio-vc-scene">
+            <objects>
+                <viewController id="inicio-vc" customClass="InicioViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="inicio-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="fill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="inicio-stack">
+                                <rect key="frame" x="32" y="300" width="329" height="182"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-inicio-contactos">
+                                        <state key="normal" title="Contactos"/>
+                                        <connections>
+                                            <action selector="irContactos:" destination="inicio-vc" eventType="touchUpInside" id="act-inicio-contactos"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-inicio-alumnos">
+                                        <state key="normal" title="Alumnos"/>
+                                        <connections>
+                                            <action selector="irAlumnos:" destination="inicio-vc" eventType="touchUpInside" id="act-inicio-alumnos"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-inicio-productos">
+                                        <state key="normal" title="Productos"/>
+                                        <connections>
+                                            <action selector="irProductos:" destination="inicio-vc" eventType="touchUpInside" id="act-inicio-productos"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Lab 11 - Montoya" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inicio-titulo">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Selecciona un módulo" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inicio-subtitulo">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="inicio-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="inicio-titulo" firstAttribute="centerX" secondItem="inicio-safe" secondAttribute="centerX" id="titulo-cx"/>
+                            <constraint firstItem="inicio-titulo" firstAttribute="bottom" secondItem="inicio-stack" secondAttribute="top" constant="-40" id="titulo-bottom"/>
+                            <constraint firstItem="inicio-subtitulo" firstAttribute="top" secondItem="inicio-titulo" secondAttribute="bottom" constant="8" id="sub-top"/>
+                            <constraint firstItem="inicio-subtitulo" firstAttribute="centerX" secondItem="inicio-safe" secondAttribute="centerX" id="sub-cx"/>
+                            <constraint firstItem="inicio-stack" firstAttribute="centerY" secondItem="inicio-safe" secondAttribute="centerY" id="stack-cy"/>
+                            <constraint firstItem="inicio-stack" firstAttribute="leading" secondItem="inicio-safe" secondAttribute="leading" constant="32" id="stack-lead"/>
+                            <constraint firstItem="inicio-safe" firstAttribute="trailing" secondItem="inicio-stack" secondAttribute="trailing" constant="32" id="stack-trail"/>
+                            <constraint firstItem="inicio-stack" firstAttribute="height" constant="182" id="stack-h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inicio" id="inicio-nav-item"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="irContactos" id="segue-vc-contactos"/>
+                        <segue destination="alum-vc" kind="show" identifier="irAlumnos" id="segue-vc-alumnos"/>
+                        <segue destination="prod-vc" kind="show" identifier="irProductos" id="segue-vc-productos"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inicio-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="4"/>
+        </scene>
+        <!--Contactos-->
+        <scene sceneID="nav-contactos-scene">
+            <objects>
+                <navigationController storyboardIdentifier="nav-contactos" id="nav-contactos" automaticallyAdjustsScrollViewInsets="NO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar-contactos"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="root-contactos"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-contactos-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="-200"/>
+        </scene>
+        <!--Lista de Contactos-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="vc-contactos" id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tabla-contacto">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="celda-titulo" detailTextLabel="celda-subtitulo" style="IBUITableViewCellStyleSubtitle" id="celda-prototipo">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="celda-prototipo" id="celda-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" id="celda-titulo">
+                                                    <rect key="frame" x="20" y="4" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" id="celda-subtitulo">
+                                                    <rect key="frame" x="20" y="25" width="353" height="14.333333015441895"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ds-outlet"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="delegate-outlet"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="tabla-contacto" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tabla-top"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tabla-contacto" secondAttribute="bottom" id="tabla-bottom"/>
+                            <constraint firstItem="tabla-contacto" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tabla-leading"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tabla-contacto" secondAttribute="trailing" id="tabla-trailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contactos - Tecsup" id="nav-item">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="btn-agregar">
+                            <connections>
+                                <action selector="agregarContacto:" destination="BYZ-38-t0r" id="action-agregar"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="TablaContacto" destination="tabla-contacto" id="outlet-tabla"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="-200"/>
+        </scene>
+        <!--Alumnos-->
+        <scene sceneID="nav-alumnos-scene">
+            <objects>
+                <navigationController storyboardIdentifier="nav-alumnos" id="nav-alumnos" automaticallyAdjustsScrollViewInsets="NO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar-alumnos"/>
+                    <connections>
+                        <segue destination="alum-vc" kind="relationship" relationship="rootViewController" id="root-alumnos"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-alumnos-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="100"/>
+        </scene>
+        <scene sceneID="alum-scene">
+            <objects>
+                <viewController storyboardIdentifier="vc-alumnos" id="alum-vc" customClass="AlumnosViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="alum-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tabla-alumnos">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellAlumno" textLabel="alum-titulo" detailTextLabel="alum-subtitulo" style="IBUITableViewCellStyleSubtitle" id="celda-alumno">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="celda-alumno" id="alum-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" id="alum-titulo">
+                                                    <rect key="frame" x="20" y="4" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" id="alum-subtitulo">
+                                                    <rect key="frame" x="20" y="25" width="353" height="14.333333015441895"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="alum-vc" id="alum-ds"/>
+                                    <outlet property="delegate" destination="alum-vc" id="alum-delegate"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="alum-safe"/>
+                        <constraints>
+                            <constraint firstItem="tabla-alumnos" firstAttribute="top" secondItem="alum-safe" secondAttribute="top" id="alum-tabla-top"/>
+                            <constraint firstItem="alum-safe" firstAttribute="bottom" secondItem="tabla-alumnos" secondAttribute="bottom" id="alum-tabla-bottom"/>
+                            <constraint firstItem="tabla-alumnos" firstAttribute="leading" secondItem="alum-safe" secondAttribute="leading" id="alum-tabla-leading"/>
+                            <constraint firstItem="alum-safe" firstAttribute="trailing" secondItem="tabla-alumnos" secondAttribute="trailing" id="alum-tabla-trailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alumnos" id="alum-nav-item">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="alum-btn-agregar">
+                            <connections>
+                                <action selector="agregarAlumno:" destination="alum-vc" id="alum-action-agregar"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tablaAlumnos" destination="tabla-alumnos" id="outlet-alum-tabla"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alum-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="100"/>
+        </scene>
+        <!--Productos-->
+        <scene sceneID="nav-productos-scene">
+            <objects>
+                <navigationController storyboardIdentifier="nav-productos" id="nav-productos" automaticallyAdjustsScrollViewInsets="NO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar-productos"/>
+                    <connections>
+                        <segue destination="prod-vc" kind="relationship" relationship="rootViewController" id="root-productos"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-productos-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="400"/>
+        </scene>
+        <!--Lista de Productos-->
+        <scene sceneID="prod-scene">
+            <objects>
+                <viewController storyboardIdentifier="vc-productos" id="prod-vc" customClass="ProductosViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="prod-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tabla-productos">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellProducto" textLabel="prod-titulo" detailTextLabel="prod-subtitulo" style="IBUITableViewCellStyleSubtitle" id="celda-producto">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="celda-producto" id="prod-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" id="prod-titulo">
+                                                    <rect key="frame" x="20" y="4" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" id="prod-subtitulo">
+                                                    <rect key="frame" x="20" y="25" width="353" height="14.333333015441895"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="prod-vc" id="prod-ds"/>
+                                    <outlet property="delegate" destination="prod-vc" id="prod-delegate"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="prod-safe"/>
+                        <constraints>
+                            <constraint firstItem="tabla-productos" firstAttribute="top" secondItem="prod-safe" secondAttribute="top" id="prod-tabla-top"/>
+                            <constraint firstItem="prod-safe" firstAttribute="bottom" secondItem="tabla-productos" secondAttribute="bottom" id="prod-tabla-bottom"/>
+                            <constraint firstItem="tabla-productos" firstAttribute="leading" secondItem="prod-safe" secondAttribute="leading" id="prod-tabla-leading"/>
+                            <constraint firstItem="prod-safe" firstAttribute="trailing" secondItem="tabla-productos" secondAttribute="trailing" id="prod-tabla-trailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Productos" id="prod-nav-item">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="prod-btn-agregar">
+                            <connections>
+                                <action selector="agregarProducto:" destination="prod-vc" id="prod-action-agregar"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tablaProductos" destination="tabla-productos" id="outlet-prod-tabla"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prod-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="400"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart" catalog="system" width="128" height="114"/>
+        <image name="graduationcap" catalog="system" width="128" height="114"/>
+        <image name="person.2" catalog="system" width="128" height="81"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
